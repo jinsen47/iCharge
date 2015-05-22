@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">charge</string>
+    <string name ="charge">电桩</string>
+    <string name="icharge">我要充电</string>
+    <string name="intelligent">知识库</string>
+    <string name="setting">我的主页</string>
+
+    <string name="order_charge_succ">预约成功</string>
+
+    <string name="myorder_item_name">订单</string>
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="consumer_key">458134590</string>
+    <string name="redirect_url">http://abc.com.cn</string>
+
+
+    <string name="details_ms">%1$02d:%2$02d</string>
+    <!-- Used to format video duration in Details dialog. hours:minutes:seconds e.g. 0:21:30 -->
+    <string name="details_hms">%1$d:%2$02d:%3$02d</string>
+
+    <string name="loading_video">"正在载入视频…"</string>
+    <string name="resume_playing_title">"继续播放视频"</string>
+    <string name="resume_playing_message">"从 %s 开始继续播放？"</string>
+    <string name="resume_playing_resume">"继续播放"</string>
+    <string name="resume_playing_restart">"重新开始"</string>
+
+    <string name="wildfirelogo">野火视频</string>
+    <string name="tab_text_wildfire">野火热播</string>
+    <string name="tab_text_myfirstpage">我的首页</string>
+    <string name="tab_text_watch">离线观看</string>
+    <string name="group_left">猜你喜欢</string>
+    <string name="group_brief">简介</string>
+    <string name="group_right">剧集列表</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="refreshing">正在刷新</string>
+    <string name="updating">最近更新</string>
+    <string name="getmore">获取更多</string>
+    <string name="share_ok">确认分享</string>
+    <string name="share_cancel">取消分享</string>
+    <string name="popup_menu_search">搜索</string>
+    <string name="popup_menu_account">账号</string>
+    <string name="logo_account">账号</string>
+    <string name="Setting_bindaccount">绑定账号</string>
+    <string name="share_sinaweibo">分享到新浪微博</string>
+    <string name="share_tenQQ">分享到腾讯QQ</string>
+    <string name="share_sohuweibo">分享到搜狐微博</string>
+    <string name="share_tenweibo">分享到腾讯微博</string>
+    <string name="share_renren">分享到人人网</string>
+    <string name="share_message">手机短信分享</string>
+    <string name="sinaweibo">新浪微博</string>
+    <string name="tengxunweibo">腾讯微博</string>
+    <string name="tengxunqq">腾讯QQ</string>
+    <string name="sohuweibo">搜狐微博</string>
+    <string name="renren">人人网</string>
+    <string name="no_more_data">没有更多的数据了</string>
+    <string name="no_more_video">没有更多视频了</string>
+    <string name="loading">正在加载</string>
+    <string name="account">关于</string>
+    <string name="context_search">请输入视频名称</string>
+
+    <string name="search">搜索</string>
+    <string name="video_err">抱歉，该视频无法播放</string>
+    <string name="share_video">分享视频</string>
+    <string name="pay_tip">自费提示:点击播放，将收取相应的信息费，计费成功后可任意观看</string>
+    <string name="playpage">播放页</string>
+    <string name="nocaching_tip">亲,你还没有下载任何视频哟</string>
+    <string name="nocaching_bottom1">教你省钱小妙招,WIFI时挑点喜欢的视频先囤货</string>
+    <string name="nocaching_bottom2">无网络时就来这里看个够</string>
+    <string name="main_home">首页</string>
+    <string name="main_comment">频道</string>
+    <string name="main_message">精选</string>
+    <string name="main_edit">设置</string>
+
+    <string name="start">开始</string>
+    <string name="pre">准备</string>
+    <string name="stop">stop</string>
+    <string name="img">Hello world!</string>
+
+
+    <string name="soap">电视剧</string>
+    <string name="tv">电影</string>
+    <string name="entertainment">喜剧</string>
+    <string name="variety">综艺</string>
+    <string name="animation">动漫</string>
+    <string name="beauty">美女</string>
+
+    <string name="viewpager_init_text">这里是轮播图片的标题</string>
+    <string name="category_entertainment">娱乐</string>
+    <string name="category_toplist_item_init_text">视频标题视频标题视频标题</string>
+    <string name="main_activity_category_title_click_callback">jumpToCategoryActivity</string>
+    <string name="main_activity_video_thumb_click_callback">jumpToVideoDetailActivity</string>
+    <string name="about_item_favorite">我的收藏</string>
+    <string name="about_item_play_history">播放历史</string>
+    <string name="about_item_clear_cache">清除缓存</string>
+    <string name="about_item_about_us">关于</string>
+    <string name="about_clear_cache_succ">清除成功</string>
+    <string name="about_group_self">个人</string>
+    <string name="about_group_other">其他</string>
+    <string name="about_item_share">推荐给好友</string>
+    <string name="about_item_callback">问题反馈</string>
+
+
+
+
+</resources>

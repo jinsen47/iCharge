@@ -1,0 +1,46 @@
+<resources>
+
+
+    <!--all page  set-->
+    <dimen name="all_page_title_text_size">20sp</dimen>
+    <dimen name="all_page_sub_text_size">18sp</dimen>
+
+
+
+    <!--person page info setting-->
+    <dimen name="person_info_group_container_margin_left">10dp</dimen>
+    <dimen name="person_info_group_container_margin_right">10dp</dimen>
+
+    <dimen name="person_info_framelayout_image_h">82dp</dimen>
+    <dimen name="person_info_framelayout_image_w">82dp</dimen>
+    <dimen name="person_info_framelayout_text_h">50dp</dimen>
+    <dimen name="person_info_framelayout_text_w">50dp</dimen>
+    <dimen name="person_info_framelayout_turn_h">20dp</dimen>
+    <dimen name="person_info_framelayout_turn_w">20dp</dimen>
+
+
+    <!--order page-->
+    <dimen name="order_charge_line_w">100dp</dimen>
+    <dimen name="order_charge_line_h">22dp</dimen>
+    <dimen name="order_charge_line_edit_w">240dp</dimen>
+    <dimen name="order_charge_line_edit_h">44dp</dimen>
+
+
+     <!--myinfo set-->
+    <dimen name="myinfo_main_h">120dp</dimen>
+    <dimen name="myinfo_radioButton_w">80dp</dimen>
+    <dimen name="myinfo_radioButton_h">44dp</dimen>
+    <dimen name="myinfo_radioButton_text_size">18sp</dimen>
+
+<!--my  car-->
+    <dimen name="mycar_image_h">90dp</dimen>
+    
+    
+    <!--my charge-->
+    <dimen name="mycharge_laber_w">120dp</dimen>
+    <dimen name="mycharg_edittext_w">240dp</dimen>
+
+    <!--my share-->
+    <dimen name="myshare_select_w">40dp</dimen>
+    <dimen name="myshare_select_h">50dp</dimen>
+</resources>

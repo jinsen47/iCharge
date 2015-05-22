@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    
+        <TextView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_markb"
+                android:gravity="center_vertical"
+                />
+        <TextView
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:text="4006860337"
+                android:gravity="center_vertical"
+
+                />
+        <TextView
+                android:id="@+id/priceImg"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_markb"
+                android:gravity="center_vertical"
+                />
+
+        <TextView
+                android:id="@+id/prcie"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="未定价"
+                android:gravity="center_vertical"
+                />
+
+        <TextView
+                android:id="@+id/freeSite"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_markb"
+                android:gravity="center_vertical"
+                />
+        <TextView
+                android:id="@+id/freeNumber"
+                android:layout_width="40dp"
+                android:gravity="center_vertical"
+                android:layout_height="40dp"
+                android:text="空位:0"
+             />
+</LinearLayout>

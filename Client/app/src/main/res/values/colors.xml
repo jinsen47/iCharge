@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--test-->
+    <color name="white">#FFFFFF</color>
+
+    <color name="radiobg_press">#43859d</color>
+    <color name="radiobg_normal">#a8fff7</color>
+    <color name="radiobg_enable">#ffc1ff69</color>
+    <color name="radiobg_test">#f7171416</color>
+
+    <color name="main_activity_title_bg">#ff3c3c3c</color>
+    <color name="main_activity_viewpager_title_bg">#84000000</color>
+    <color name="main_activity_viewpager_title">#ffffffff</color>
+    <color name="main_activity_viewpager_dot_focus">#ffffbc00</color>
+    <color name="main_activity_viewpager_dot_normal">#ffb6b3b2</color>
+    <color name="main_activity_categories_bg">#ffdbdbdb</color>
+
+
+    <!--person info color set-->
+
+    <color name="main_activity_category_title">#ff333333</color>
+    <color name="person_divider">#ffdcdcdc</color>
+    <color name="person_title_color">#ff03dcdc</color>
+    <color name="person_title_text_color">#ffffffff</color>
+    <color name="person_line_text_color">#ff0c1011</color>
+
+    <!--order charge-->
+    <color name="order_charge_title_bg">#ff03dcdc</color>
+    <color name="order_charge_allpage_bg">#ffd2d2d2</color>
+    <color name="order_charge_edit_text_bg">#ff75ffba</color>
+    <color name="order_charge_text_color">#000</color>
+
+    <!--myinfo page setting-->
+    <color name ="radioButton_text_color">#000</color>
+
+    <!--myorder -->
+    <color name="myorder_line_bg">#FFF</color>
+
+</resources>

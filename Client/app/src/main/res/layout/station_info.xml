@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            <ImageView
+                    android:id="@+id/ivVideo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/icon_markb"
+                    />
+
+            <TextView
+                    android:id="@+id/StationName"
+                    android:layout_width="220dp"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:text="清华科技园充电桩"
+                    android:textSize="20dp"
+                     />
+            <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    android:text="1.32公里"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/address"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:text="   北京市海地区中关村东路1号"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                />
+
+        <include
+                layout="@layout/score"
+                android:id="@+id/ll_group"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+        <include
+                layout="@layout/tel_info"
+                android:id="@+id/ll_group"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+        <include
+                layout="@layout/order_button"
+                android:id="@+id/ll_group"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

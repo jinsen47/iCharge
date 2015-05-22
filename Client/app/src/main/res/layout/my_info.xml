@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/order_charge_allpage_bg"
+              android:orientation="vertical" >
+
+    <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/order_charge_title_bg"
+            android:gravity="center"
+            android:text="我的个人信息"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/all_page_title_text_size" />
+
+
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/myinfo_main_h"
+                android:gravity="center"
+            >
+        <ImageView
+                android:id="@+id/main_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/testround" />
+
+    </LinearLayout>
+    
+    
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="101dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/corners_bg"
+            android:orientation="vertical"
+
+            android:padding="10dp" >
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+
+
+            <TextView
+                    android:layout_width="@dimen/order_charge_line_w"
+                    android:layout_height="@dimen/order_charge_line_h"
+                    android:layout_marginLeft="14dp"
+                    android:text="昵称"
+                    android:textColor="#000"
+                    android:textSize="@dimen/all_page_sub_text_size" />
+
+            <EditText
+                    android:id="@+id/inputDate"
+                    android:layout_width="@dimen/order_charge_line_edit_w"
+                    android:layout_height="@dimen/order_charge_line_edit_h"
+                    android:layout_gravity="center"
+
+                    android:background="#FFF"
+                    android:textColor="@color/order_charge_text_color"
+                    android:text="坑爹的小石头"
+                    android:focusable="true"
+                    android:inputType="none" />
+
+        </LinearLayout>
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/person_divider"
+                />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/person_divider"
+                    />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+
+
+            <TextView
+                    android:layout_width="@dimen/order_charge_line_w"
+                    android:layout_height="@dimen/order_charge_line_h"
+                    android:layout_marginLeft="14dp"
+                    android:text="性别"
+                    android:textColor="#000"
+                    android:textSize="@dimen/all_page_sub_text_size" />
+
+            <RadioGroup
+                    android:id="@+id/sex"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:gravity="left"
+                    android:layout_height="wrap_content">
+                <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="@dimen/myinfo_radioButton_w"
+                        android:layout_height="@dimen/myinfo_radioButton_h"
+                        android:textColor="@color/radioButton_text_color"
+                        android:text="男"/>
+                <RadioButton
+                        android:id="@+id/female"
+                        android:layout_width="@dimen/myinfo_radioButton_w"
+                        android:layout_height="@dimen/myinfo_radioButton_h"
+                        android:textColor="@color/radioButton_text_color"
+                        android:text="女"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/corners_bg"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+
+        <TextView
+
+                android:layout_width="@dimen/order_charge_line_w"
+                android:layout_height="@dimen/order_charge_line_h"
+                android:layout_marginLeft="14dp"
+                android:text="我的车型"
+                android:textColor="#000"
+                android:textSize="@dimen/all_page_sub_text_size" />
+        <EditText
+                android:id="@+id/charge_place"
+                android:layout_width="@dimen/order_charge_line_edit_w"
+                android:layout_height="@dimen/order_charge_line_edit_h"
+                android:background="#FFF"
+                android:textColor="@color/order_charge_text_color"
+                android:focusable="false"
+                android:inputType="none" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

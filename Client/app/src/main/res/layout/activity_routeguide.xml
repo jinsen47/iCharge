@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mapview_layout">
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/content_layout"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+            <TextView
+                    android:id="@+id/src_node"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="起点：我的位置" />
+
+            <TextView
+                    android:id="@+id/dest_node"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="终点：北京天安门" />
+
+            <Button
+                    android:id="@+id/strat_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:text="一键导航" />
+        </LinearLayout>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/strat_navigation2"
+                android:textSize="18sp"
+
+                android:layout_gravity="center_horizontal"
+                android:text="使用百度地图坐标一键导航"/>
+
+        <!-- 途经点 -->
+        <LinearLayout
+                android:id="@+id/ll_via_node"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+            <EditText
+                    android:id="@+id/et_via_x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3999956"
+                    android:numeric="integer"
+                    android:textSize="12sp"
+                    android:hint="输入途经点纬度"/>
+            <EditText
+                    android:id="@+id/et_via_y"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="11631490"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textSize="12sp"
+                    android:hint="输入途经点经度"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_via"
+                    android:textSize="14sp"
+                    android:text="增加途经点"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
