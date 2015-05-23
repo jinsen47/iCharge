@@ -10,6 +10,10 @@
 
     <string name="myorder_item_name">订单</string>
 
+    <string name="opLogin">登陆</string>
+    <string name="logout">登出</string>
+    <string name="show_login">打开登录授权</string>
+
 
 
     <string name="action_settings">Settings</string>

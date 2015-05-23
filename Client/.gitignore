@@ -33,3 +33,5 @@ proguard/
 # Mac cache
 .DS_Store
 
+# Taobao Security File
+OneSDK/res/drawable/yw_1222.jpg
