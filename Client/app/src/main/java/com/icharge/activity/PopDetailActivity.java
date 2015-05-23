@@ -9,6 +9,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.util.Log;
+import java.io.File;
+import java.net.URISyntaxException;
 import android.widget.Toast;
 /**
  * Created by emosfet on 2015/4/25.
@@ -73,10 +76,31 @@ public class PopDetailActivity extends Activity{
         btn_jmp_detail.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Toast.makeText(getApplicationContext(), "提示：点击窗口外部关闭窗口！",
-                        Toast.LENGTH_SHORT).show();
+                try {
+                    Intent intent;
+                    String temp="intent://map/direction?origin=latlng:"+Double.toString(my_latitude)+","+Double.toString(my_longitude)+"|name:我家&destination="+station_name+"&mode=driving®ion=杭州&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end";
+                    //intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                    intent = Intent.getIntent(temp);
+                    if(isInstallByread("com.baidu.BaiduMap")){
+                        startActivity(intent); //启动调用
+                        Log.e("GasStation", "百度地图客户端已经安装") ;
+                    }else{
+                        Log.e("GasStation", "没有安装百度地图客户端") ;
+                    }
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }
             }
         });
+    }
+
+    /**
+    * 判断是否安装目标应用
+    * @param packageName 目标应用安装后的包名
+    * @return 是否已安装目标应用
+    */
+    private boolean isInstallByread(String packageName) {
+        return new File("/data/data/" + packageName).exists();
     }
 
     @Override

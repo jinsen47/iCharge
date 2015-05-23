@@ -72,6 +72,8 @@
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name="com.icharge.ChargeApp"
         android:allowBackup="true"
@@ -93,7 +95,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="TBo7p0wyDoDdhqPISzRf0UPt" >
+            android:value="qDdczMLdPWqDRGT2gxEMklxL" >
         </meta-data>
 
         <!--<activity-->
@@ -128,31 +130,15 @@
             <!--android:name=".MyActivity"-->
             <!--android:theme="@android:style/Theme.NoTitleBar" >-->
         <!--</activity>-->
-        <!--<activity-->
-            <!--android:name=".PoiSearchActivity"-->
-            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
-        <!--</activity>-->
-        <!--<activity-->
-            <!--android:name=".RouteGuideActivity"-->
-            <!--android:configChanges="orientation|screenSize|keyboard|keyboardHidden"-->
-            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
 
-        <!--</activity>-->
-        <!--<activity-->
-            <!--android:name=".NavigatorActivity"-->
-            <!--android:configChanges="orientation|screenSize|keyboard|keyboardHidden"-->
-            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
-        <!--</activity>-->
-        <!--<activity-->
-            <!--android:name=".PopDetailActivity"-->
-            <!--android:theme="@style/MyDialogStyleBottom" />-->
+
+
         <activity
             android:name="com.icharge.ui.main.MainActivity"
             android:label="@string/title_activity_main"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -160,6 +146,28 @@
         <!--<activity-->
             <!--android:name=".MoreInformation"-->
             <!--android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name=".PoiSearchActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <activity
+        android:name=".PopDetailActivity"
+        android:theme="@style/MyDialogStyleBottom" />
+
+        <activity
+            android:name=".RouteGuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+
+        </activity>
+        <activity
+            android:name=".NavigatorActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
         <activity
             android:name="com.icharge.ui.profile.MyInfoActivity"
             android:screenOrientation="portrait" />
