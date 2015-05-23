@@ -300,8 +300,16 @@ public class MapFragment extends Fragment implements
                 // TODO Auto-generated method stub
                 //EditText editCity = (EditText) findViewById(R.id.city);
                 //EditText editGeoCodeKey = (EditText) findViewById(R.id.geocodekey);
-                Toast.makeText(getActivity(), city_all ,Toast.LENGTH_LONG).show();
-                String city = "杭州";
+                String city = city_all;
+                count_charge_station=0;
+
+                // Geo搜索
+                for(int i=0;i<5;i++){
+                    // 初始化搜索模块，注册事件监听
+                    mSearch = GeoCoder.newInstance();
+                    mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
+                    // 发起搜索
+                    mSearch.geocode(new GeoCodeOption().city(city).address(GeoCodeKey[i]));
 
 //                // Geo搜索
 //                for(int i=0;i<5;i++){
@@ -322,6 +330,10 @@ public class MapFragment extends Fragment implements
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(getActivity(), PoiSearchActivity.class);
                 //startActivity(intent);
+                Bundle bundle = new Bundle();
+                //传递name参数为tinyphp
+                bundle.putString("city_all", city_all);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, 1);
             }
         });
@@ -444,7 +456,7 @@ public class MapFragment extends Fragment implements
                 Toast.makeText(getActivity(), result, Toast.LENGTH_LONG).show();
 
                 //EditText editCity = (EditText) findViewById(R.id.city);
-                String city = "杭州";
+                String city = city_all;
                 mPoiSearch.searchInCity((new PoiCitySearchOption())
                         .city(city)
                         .keyword(result)

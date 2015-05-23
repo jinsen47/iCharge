@@ -58,14 +58,7 @@
             android:layout_height="0dp"
             android:layout_weight="9"
             android:orientation="vertical">
-            <!--
-        <com.baidu.mapapi.map.MapView
-                android:id="@+id/bmapView_poisearch"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:clickable="true" />
-                -->
+
         <ListView
                 android:id="@+id/listView_suggestion"
                 android:layout_width="fill_parent"
