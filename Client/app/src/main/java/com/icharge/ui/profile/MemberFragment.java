@@ -1,16 +1,11 @@
 package com.icharge.ui.profile;
 
-import java.util.Map;
-import java.util.Map.Entry;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
-import android.widget.Toast;
 
 import com.icharge.activity.R;
 

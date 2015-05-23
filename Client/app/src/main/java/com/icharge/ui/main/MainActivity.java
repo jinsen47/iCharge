@@ -10,12 +10,14 @@ import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.icharge.activity.R;
 import com.icharge.ui.BaseActivity;
+import com.icharge.utils.ScreenHelper;
+import com.icharge.views.ViewPagerCompat;
 
 public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private Toolbar mToolbar;
-    private ViewPager mViewPager;
+    private ViewPagerCompat mViewPager;
     private MainAdapter mAdapter;
     private PagerSlidingTabStrip mTabs;
 
@@ -28,8 +30,11 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
+
+        int width = ScreenHelper.getScreenWidth(this);
+        int height = ScreenHelper.getScreenHeight(this);
         mToolbar = ((Toolbar) findViewById(R.id.tool_bar));
-        mViewPager = (ViewPager) findViewById(R.id.main_cotainer);
+        mViewPager = (ViewPagerCompat) findViewById(R.id.main_cotainer);
         mAdapter = new MainAdapter(getSupportFragmentManager());
         mTabs = (PagerSlidingTabStrip) findViewById(R.id.main_tabs);
 
@@ -40,6 +45,9 @@ public class MainActivity extends BaseActivity {
         mTabs.setBackgroundColor(getResources().getColor(R.color.color_primary));
         mTabs.setDividerColor(getResources().getColor(R.color.main_divider));
         mTabs.setIndicatorColor(getResources().getColor(R.color.color_primary_dark));
+
+        mTabs.setShouldExpand(true);
+
 
     }
 
