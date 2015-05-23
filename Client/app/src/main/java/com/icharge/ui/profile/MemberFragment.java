@@ -12,12 +12,6 @@ import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.widget.Toast;
 
-import com.alibaba.sdk.android.AlibabaSDK;
-import com.alibaba.sdk.android.login.LoginService;
-import com.alibaba.sdk.android.login.callback.LoginCallback;
-import com.alibaba.sdk.android.login.callback.LogoutCallback;
-import com.alibaba.sdk.android.session.model.Session;
-import com.alibaba.sdk.android.ui.support.WebViewActivitySupport;
 import com.icharge.activity.R;
 
 /**
