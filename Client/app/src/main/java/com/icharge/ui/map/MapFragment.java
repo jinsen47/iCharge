@@ -3,7 +3,6 @@ package com.icharge.ui.map;
 import com.icharge.ChargeApp;
 
 import com.baidu.navisdk.BNaviEngineManager;
-import com.icharge.activity.LocationApplication;
 import com.icharge.activity.PoiSearchActivity;
 import com.icharge.activity.PopDetailActivity;
 import com.icharge.activity.ZoomControlsView;
@@ -13,47 +12,38 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.icharge.activity.R;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.*;
 import com.baidu.mapapi.map.BaiduMap.*;
 import com.baidu.mapapi.model.LatLng;
 
 //import com.example.test.LocationApplication;
 //定位所需jar包
-import com.baidu.location.BDLocation;
-import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
-import com.baidu.location.BDNotifyListener;//假如用到位置提醒功能，需要import该类
 
 import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.geocode.GeoCodeOption;
 import com.baidu.mapapi.search.geocode.GeoCodeResult;
 import com.baidu.mapapi.search.geocode.GeoCoder;
 import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
-import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.baidu.location.LocationClientOption.LocationMode;
 
 import com.baidu.mapapi.overlayutil.PoiOverlay;
 import com.baidu.mapapi.search.core.CityInfo;
 import com.baidu.mapapi.search.core.PoiInfo;
-import com.baidu.mapapi.search.core.SearchResult;
 import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
 import com.baidu.mapapi.search.poi.PoiCitySearchOption;
 import com.baidu.mapapi.search.poi.PoiDetailResult;
@@ -62,12 +52,10 @@ import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
 
 import com.baidu.lbsapi.auth.LBSAuthManagerListener;
-import com.baidu.navisdk.BNaviEngineManager.NaviEngineInitListener;
 import com.baidu.navisdk.BaiduNaviManager;
-import com.baidu.navisdk.ui.routeguide.subview.L;
-import com.baidu.navisdk.util.verify.BNKeyVerifyListener;
-import com.icharge.beans.KnowItem;
-import com.icharge.ui.knowledge.KnowAdapter;
+import com.icharge.api.RestSource;
+import com.icharge.beans.LocationBean;
+import com.icharge.utils.BusProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,10 +85,10 @@ public class MapFragment extends Fragment implements
     private String tempcoor="bd09ll";
 
     private static Marker marker_self = null;
-    private Marker[] marker_charge_station = new Marker[5];
+//    private Marker[] marker_charge_station = new Marker[5];
     private PoiOverlay search_overlay = null;
 
-    private int count_charge_station = 0;
+//    private int count_charge_station = 0;
     private int num_charge_station=0;
     private boolean charge_station_found = false;
     private boolean mIsEngineInitSuccess = false;
@@ -108,8 +96,12 @@ public class MapFragment extends Fragment implements
     static private double my_latitude=0;
     static private double my_longitude=0;
     static String city_all = null;
-    String[] GeoCodeKey = new String[64];
+//    String[] GeoCodeKey = new String[64];
     private int load_Index = 0;
+
+    private RestSource mRestSource;
+    private List<LocationBean> mLocsList;
+    private List<Marker> mMarkers;
 
 
     public MapFragment(){}
@@ -192,6 +184,7 @@ public class MapFragment extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootview = inflater.inflate(R.layout.fragment_map, container, false);
+        mRestSource = RestSource.getInstance();
         return rootview;
     }
 
@@ -219,6 +212,18 @@ public class MapFragment extends Fragment implements
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        BusProvider.getDefaultBus().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        BusProvider.getDefaultBus().unregister(this);
+    }
+
     private void initView() {
 
         //定位服务客户端
@@ -238,11 +243,11 @@ public class MapFragment extends Fragment implements
         btn_zoom_in = (Button)getView().findViewById(R.id.zoom_in);
         btn_zoom_out = (Button)getView().findViewById(R.id.zoom_out);
 
-        GeoCodeKey[0]= "杭州市余杭区西溪湿地龙舌嘴入口";
-        GeoCodeKey[1]= "杭州市西湖区西斗门路3号";
-        GeoCodeKey[2]= "杭州市江干区景昙路18-26号";
-        GeoCodeKey[3]= "杭州市下城区绍兴路365号";
-        GeoCodeKey[4]= "杭州市上城区延安路98号";
+//        GeoCodeKey[0]= "杭州市余杭区西溪湿地龙舌嘴入口";
+//        GeoCodeKey[1]= "杭州市西湖区西斗门路3号";
+//        GeoCodeKey[2]= "杭州市江干区景昙路18-26号";
+//        GeoCodeKey[3]= "杭州市下城区绍兴路365号";
+//        GeoCodeKey[4]= "杭州市上城区延安路98号";
 
         InitLocation();//定位监听接口初始化
 
@@ -297,17 +302,17 @@ public class MapFragment extends Fragment implements
                 //EditText editGeoCodeKey = (EditText) findViewById(R.id.geocodekey);
                 Toast.makeText(getActivity(), city_all ,Toast.LENGTH_LONG).show();
                 String city = "杭州";
-                count_charge_station=0;
 
-                // Geo搜索
-                for(int i=0;i<5;i++){
-                    // 初始化搜索模块，注册事件监听
-                    mSearch = GeoCoder.newInstance();
-                    mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
-                    // 发起搜索
-                    mSearch.geocode(new GeoCodeOption().city(city).address(GeoCodeKey[i]));
-
-                }
+//                // Geo搜索
+//                for(int i=0;i<5;i++){
+//                    // 初始化搜索模块，注册事件监听
+//                    mSearch = GeoCoder.newInstance();
+//                    mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
+//                    // 发起搜索
+//                    mSearch.geocode(new GeoCodeOption().city(city).address(GeoCodeKey[i]));
+//
+//                }
+                mRestSource.getChargers(city);
             }
         });
 
@@ -327,11 +332,15 @@ public class MapFragment extends Fragment implements
                 if (marker == marker_self) {
                     String str = String.format("纬度：%f 经度：%f",
                             marker.getPosition().latitude, marker.getPosition().longitude);
-                    Toast.makeText(getActivity(), str,Toast.LENGTH_LONG).show();
-                }
-                else if (IsChargeStation(marker)) {
-                    charge_station_found = false;
-                    String str = String.format(GeoCodeKey[num_charge_station]);
+                    Toast.makeText(getActivity(), str, Toast.LENGTH_LONG).show();
+                } else {
+                    int pos = isChargeStation(marker);
+                    if (pos == -1) {
+                        Log.d("MapFragment", "Marker invalid");
+                        return false;
+                    }
+                    String str = mLocsList.get(pos).getName();
+//                    String str = String.format(GeoCodeKey[num_charge_station]);
 
                     Intent intent = new Intent(getActivity(), PopDetailActivity.class);
                     Bundle bundle = new Bundle();
@@ -350,6 +359,17 @@ public class MapFragment extends Fragment implements
 
     }
 
+    public void onEventMainThread(List<LocationBean> list) {
+        mLocsList = list;
+        mMarkers = new ArrayList<>();
+        for (int i = 0; i < mLocsList.size(); i++) {
+            mSearch = GeoCoder.newInstance();
+            mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
+
+            mSearch.geocode(new GeoCodeOption().city("杭州").address(mLocsList.get(i).getLocation()));
+        }
+    }
+
     //地理编码请求结果返回
     @Override
     public void onGetGeoCodeResult(GeoCodeResult result) {
@@ -359,12 +379,12 @@ public class MapFragment extends Fragment implements
             return;
         }
 
-        marker_charge_station[count_charge_station]=(Marker)mBaiduMap.addOverlay(new MarkerOptions().position(result.getLocation())
+        Marker tempMarker = (Marker)mBaiduMap.addOverlay(new MarkerOptions().position(result.getLocation())
             .icon(BitmapDescriptorFactory
                     .fromResource(R.drawable.charge_slow_free)));
+        mMarkers.add(tempMarker);
 
         //mBaiduMap.setMapStatus(MapStatusUpdateFactory.newLatLng(result.getLocation()));
-        count_charge_station++;
     }
 
     //反地理编码请求结果返回，不需要所以没有写
@@ -472,14 +492,12 @@ public class MapFragment extends Fragment implements
         mLocationClient.setLocOption(option);
     }
 
-    private boolean IsChargeStation(Marker marker){
-        for (int i = 0; i < marker_charge_station.length; i++) {
-            if (marker == marker_charge_station[i]) {
-                charge_station_found = true;
-                num_charge_station = i;
-                break;
+    private int isChargeStation(Marker marker){
+        for (int i = 0; i < mMarkers.size(); i++) {
+            if (marker.equals(mMarkers.get(i))) {
+                return i;
             }
         }
-        return charge_station_found;
+        return -1;
     }
 }

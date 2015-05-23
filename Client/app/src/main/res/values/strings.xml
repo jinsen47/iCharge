@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">charge</string>
+    <string name="app_name">ICharge</string>
     <string name ="charge">电桩</string>
     <string name="icharge">我要充电</string>
     <string name="intelligent">知识库</string>

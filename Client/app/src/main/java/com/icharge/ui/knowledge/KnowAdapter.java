@@ -9,10 +9,8 @@ import android.widget.TextView;
 
 import com.android.volley.ui.NetworkImageViewPlus;
 import com.icharge.activity.R;
-import com.icharge.beans.KnowItem;
+import com.icharge.beans.KnowBean;
 import com.icharge.utils.ImageUtil;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -24,13 +22,13 @@ public class KnowAdapter extends RecyclerView.Adapter<KnowAdapter.KnowHolder> {
 
     private LayoutInflater mInflator;
     private Context mContext;
-    private List<KnowItem> mList;
+    private List<KnowBean> mList;
     private MyItemClickListener myItemClickListener;
 
     private final String DEFAULT_URL = "http://g1.ykimg.com/1100641F464F826E80E0BC017EAC6332ABE904-0DAD-0F39-7A97-6C03B44A1154";
 
 
-    public KnowAdapter(Context context,List<KnowItem> list) {
+    public KnowAdapter(Context context,List<KnowBean> list) {
         mContext = context;
         mList = list;
         mInflator = LayoutInflater.from(context);
@@ -94,5 +92,9 @@ public class KnowAdapter extends RecyclerView.Adapter<KnowAdapter.KnowHolder> {
             }
 
         }
+    }
+
+    public void clear() {
+        mList.clear();
     }
 }
