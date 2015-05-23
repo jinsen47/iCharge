@@ -3,8 +3,417 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.icharge.ui.knowledge.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_activity_categories_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/main_activity_viewpager_title"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person_info_detail"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/person_info" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="个人信息"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/person_divider"
+                    />
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person_car"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/person_car" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="我的车辆"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/person_divider"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person_order"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/person_order" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="我的预约"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/person_divider"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iwill_bulid"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/bulid"
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/iwill_bulid" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="我要建电桩"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/person_divider"
+                    />
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person_share"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/share"
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/person_share" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="分享电桩"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/person_divider"
+                    />
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/person_ac_order"
+                    android:layout_weight="1"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:id="@+id/ivVideo"
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_text_w"
+                            android:layout_height="@dimen/person_info_framelayout_text_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/person_ac_order" />
+                    </FrameLayout>
+
+
+
+                    <TextView android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:text="我接收的电桩"
+                        android:textColor="@color/person_line_text_color"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/all_page_sub_text_size"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:scaleType ="fitXY"
+                            android:layout_width="@dimen/person_info_framelayout_image_w"
+                            android:layout_height="@dimen/person_info_framelayout_image_h" />
+
+                        <TextView
+                            android:layout_width="@dimen/person_info_framelayout_turn_w"
+                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

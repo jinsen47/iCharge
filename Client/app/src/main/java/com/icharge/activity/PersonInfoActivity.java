@@ -6,6 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.icharge.ui.profile.MyAcceptOrderActivity;
+import com.icharge.ui.profile.MyBuildChargeActivity;
+import com.icharge.ui.profile.MyCarActivity;
+import com.icharge.ui.profile.MyInfoActivity;
+import com.icharge.ui.profile.MyOrderActivtiy;
+import com.icharge.ui.profile.MyShareActivity;
+
 /**
  * Created by Administrator on 2015/4/1.
  */

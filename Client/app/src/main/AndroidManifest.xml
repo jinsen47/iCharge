@@ -114,27 +114,7 @@
         <!--<activity-->
             <!--android:name=".OrderChargeActivity"-->
             <!--android:screenOrientation="portrait" />-->
-        <activity
-            android:name=".MoreInformation"
-            android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name=".MyInfoActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name=".MyCarActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name=".MyOrderActivtiy"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name=".MyBuildChargeActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name=".MyShareActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name=".MyAcceptOrderActivity"-->
-            <!--android:screenOrientation="portrait" />-->
+
         <!--<activity-->
             <!--android:name=".MainActivity"-->
             <!--android:label="@string/app_name" >-->
@@ -176,6 +156,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--<activity-->
+            <!--android:name=".MoreInformation"-->
+            <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.icharge.ui.profile.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.icharge.ui.profile.MyCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.icharge.ui.profile.MyOrderActivtiy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.icharge.ui.profile.MyBuildChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.icharge.ui.profile.MyShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.icharge.ui.profile.MyAcceptOrderActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
