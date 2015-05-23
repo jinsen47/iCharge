@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Main color types -->
+    <color name="color_primary">#ff03dcdc</color>
+    <color name="color_primary_dark">#0097A7</color>
+    <color name="color_accent">#03A9F4</color>
+
     <!--test-->
     <color name="white">#FFFFFF</color>
+    <color name="main_background">#ccFFFFFF</color>
+    <color name="main_divider">#00ffffff</color>
 
     <color name="radiobg_press">#43859d</color>
     <color name="radiobg_normal">#a8fff7</color>

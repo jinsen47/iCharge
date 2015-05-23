@@ -1,6 +1,7 @@
 package com.icharge.adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,7 @@ public class ImageListAdapter extends ArrayAdapter<InformateDate> {
     private List<InformateDate> videoList;
     public static String TAG ="ImageListAdapter";
 
-    public ImageListAdapter(Activity activity, List<InformateDate> InformateDateLists, ListView listView) {
+    public ImageListAdapter(Context activity, List<InformateDate> InformateDateLists, ListView listView) {
         super(activity, 0, InformateDateLists);
         this.listView = listView;
 //        asyncImageLoader = new AsyncImageLoader();

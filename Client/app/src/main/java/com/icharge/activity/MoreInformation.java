@@ -40,7 +40,7 @@ public class MoreInformation extends Activity
         webSettings.setJavaScriptEnabled(true);
 
         //支持插件
-        webSettings.setPluginsEnabled(true);
+//        webSettings.setPluginsEnabled(true);
 
         //设置可以访问文件
 //        webSettings.setAllowFileAccess(true);

@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.icharge.ui.main.MainActivity"
+    android:background="@color/main_background">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/app_toolbar"/>
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/main_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_below="@id/tool_bar"
+        app:pstsTabPaddingLeftRight="32dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_tabs">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_cotainer"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.icharge.activity"
-          android:versionCode="1"
-          android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="14"/>
+    package="com.icharge.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="14" />
     <!-- 百度地图初始化所需权限声明 -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS">
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
     </uses-permission>
     <uses-permission android:name="android.permission.USE_CREDENTIALS" >
     </uses-permission>
@@ -21,7 +22,7 @@
     </uses-permission>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
     </uses-permission>
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
     </uses-permission>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" >
@@ -36,116 +37,145 @@
     </uses-permission>
 
     <!-- 百度地图定位功能所需权限声明 -->
-    <!-- 这个权限用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
     </uses-permission>
-    <!-- 这个权限用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
     </uses-permission>
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
     </uses-permission>
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
     </uses-permission>
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
     </uses-permission>
-    <!-- 用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE">
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
     </uses-permission>
-    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
     </uses-permission>
-    <!-- 访问网络，网络定位需要上网-->
+    <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
-    <!-- SD卡读取权限，用户写入离线定位数据-->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
     </uses-permission>
-    <!--允许应用读取低级别的系统日志文件 -->
-    <uses-permission android:name="android.permission.READ_LOGS">
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
     </uses-permission>
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
-            android:name="com.icharge.activity.LocationApplication"
-            android:label="@string/app_name"
-            android:allowBackup="true"
-            android:icon="@drawable/ic_launcher">
-
+        android:name="com.icharge.ChargeApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
         <service
-                android:name="com.baidu.location.f"
-                android:enabled="true"
-                android:process=":remote" >
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
             <intent-filter>
                 <action android:name="com.baidu.location.service_v2.2" >
                 </action>
             </intent-filter>
         </service>
-
         <service
-                android:name="com.baidu.navi.location.f"
-                android:enabled="true"/>
+            android:name="com.baidu.navi.location.f"
+            android:enabled="true" />
 
         <meta-data
-                android:name="com.baidu.lbsapi.API_KEY"
-                android:value="TBo7p0wyDoDdhqPISzRf0UPt" >
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="TBo7p0wyDoDdhqPISzRf0UPt" >
         </meta-data>
-        <activity android:name="com.icharge.activity.MapActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.StationInfoActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.InformationActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.PersonInfoActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.testActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.testActivity2" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.OrderChargeActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MoreInformation" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyInfoActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyCarActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyOrderActivtiy" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyBuildChargeActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyShareActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.icharge.activity.MyAcceptOrderActivity" android:screenOrientation="portrait"></activity>
 
+        <!--<activity-->
+            <!--android:name=".StationInfoActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".InformationActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".PersonInfoActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".testActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".testActivity2"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".OrderChargeActivity"-->
+            <!--android:screenOrientation="portrait" />-->
         <activity
-                android:name=".MainActivity"
-                android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+            android:name=".MoreInformation"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name=".MyInfoActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MyCarActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MyOrderActivtiy"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MyBuildChargeActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MyShareActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MyAcceptOrderActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-        <activity
-                android:name="com.icharge.activity.MyActivity"
-                android:theme="@android:style/Theme.NoTitleBar">
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".MyActivity"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".PoiSearchActivity"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".RouteGuideActivity"-->
+            <!--android:configChanges="orientation|screenSize|keyboard|keyboardHidden"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
 
-        </activity>
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".NavigatorActivity"-->
+            <!--android:configChanges="orientation|screenSize|keyboard|keyboardHidden"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar" >-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".PopDetailActivity"-->
+            <!--android:theme="@style/MyDialogStyleBottom" />-->
         <activity
-                android:name="com.icharge.activity.PoiSearchActivity"
-                android:theme="@android:style/Theme.NoTitleBar">
-        </activity>
-
-        <activity
-                android:name="com.icharge.activity.RouteGuideActivity"
-                android:theme="@android:style/Theme.NoTitleBar"
-                android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
+            android:name="com.icharge.ui.main.MainActivity"
+            android:label="@string/title_activity_main"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.BAIDUNAVISDK_DEMO" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-                android:name="com.icharge.activity.NavigatorActivity"
-                android:theme="@android:style/Theme.NoTitleBar"
-                android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
-        </activity>
-
-        <activity
-                android:name="com.icharge.activity.PopDetailActivity"
-                android:theme="@style/MyDialogStyleBottom" />
-
-
-
     </application>
+
 </manifest>
