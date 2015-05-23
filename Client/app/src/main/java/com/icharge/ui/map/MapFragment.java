@@ -301,25 +301,7 @@ public class MapFragment extends Fragment implements
                 //EditText editCity = (EditText) findViewById(R.id.city);
                 //EditText editGeoCodeKey = (EditText) findViewById(R.id.geocodekey);
                 String city = city_all;
-                count_charge_station=0;
 
-                // Geo搜索
-                for(int i=0;i<5;i++){
-                    // 初始化搜索模块，注册事件监听
-                    mSearch = GeoCoder.newInstance();
-                    mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
-                    // 发起搜索
-                    mSearch.geocode(new GeoCodeOption().city(city).address(GeoCodeKey[i]));
-
-//                // Geo搜索
-//                for(int i=0;i<5;i++){
-//                    // 初始化搜索模块，注册事件监听
-//                    mSearch = GeoCoder.newInstance();
-//                    mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
-//                    // 发起搜索
-//                    mSearch.geocode(new GeoCodeOption().city(city).address(GeoCodeKey[i]));
-//
-//                }
                 mRestSource.getChargers(city);
             }
         });
