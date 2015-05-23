@@ -13,6 +13,11 @@ import android.util.Log;
 import java.io.File;
 import java.net.URISyntaxException;
 import android.widget.Toast;
+
+import com.baidu.navisdk.BNaviPoint;
+import com.baidu.navisdk.BaiduNaviManager;
+import com.baidu.navisdk.comapi.routeplan.RoutePlanParams;
+
 /**
  * Created by emosfet on 2015/4/25.
  */
@@ -55,20 +60,19 @@ public class PopDetailActivity extends Activity{
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
+                launchNavigator2(my_latitude, my_longitude,station_name, station_latitude, station_longitude);
+                /*
                 Intent intent=new Intent(PopDetailActivity.this,RouteGuideActivity.class);
                 Bundle bundle=new Bundle();
                 //传递name参数为tinyphp
-
                 bundle.putDouble("src_latitude",my_latitude);
                 bundle.putDouble("src_longitude",my_longitude);
-
                 bundle.putString("dest_name", station_name);
                 bundle.putDouble("dest_latitude",station_latitude);
                 bundle.putDouble("dest_longitude",station_longitude);
-
                 intent.putExtras(bundle);
-
                 startActivity(intent);
+                */
                 finish();
 
             }
@@ -101,6 +105,34 @@ public class PopDetailActivity extends Activity{
     */
     private boolean isInstallByread(String packageName) {
         return new File("/data/data/" + packageName).exists();
+    }
+
+    private void launchNavigator2(
+            double my_latitude,double my_longitude,String dest_name, double dest_latitude,double dest_longitude){
+        //这里给出一个起终点示例，实际应用中可以通过POI检索、外部POI来源等方式获取起终点坐标
+        BNaviPoint startPoint = new BNaviPoint(my_longitude,my_latitude,
+                "我的位置", BNaviPoint.CoordinateType.BD09_MC);
+        BNaviPoint endPoint = new BNaviPoint(dest_longitude,dest_latitude,
+                dest_name, BNaviPoint.CoordinateType.BD09_MC);
+        BaiduNaviManager.getInstance().launchNavigator(this,
+                startPoint,                                      //起点（可指定坐标系）
+                endPoint,                                        //终点（可指定坐标系）
+                RoutePlanParams.NE_RoutePlan_Mode.ROUTE_PLAN_MOD_MIN_TIME,       //算路方式
+                true,                                            //真实导航
+                BaiduNaviManager.STRATEGY_FORCE_ONLINE_PRIORITY, //在离线策略
+                new BaiduNaviManager.OnStartNavigationListener() {                //跳转监听
+
+                    @Override
+                    public void onJumpToNavigator(Bundle configParams) {
+                        Intent intent = new Intent(PopDetailActivity.this, NavigatorActivity.class);
+                        intent.putExtras(configParams);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onJumpToDownloader() {
+                    }
+                });
     }
 
     @Override
