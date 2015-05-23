@@ -25,12 +25,8 @@ import java.util.Map;
 
 public class LocationApplication extends Application {
     public LocationClient mLocationClient;
-    //	public GeofenceClient mGeofenceClient;
     public MyLocationListener mMyLocationListener;
-
     public TextView mLocationResult;
-    //	public TextView logMsg;
-//	public TextView trigger,exit;
     public Vibrator mVibrator;
 
     @Override
@@ -39,8 +35,6 @@ public class LocationApplication extends Application {
         mLocationClient = new LocationClient(this.getApplicationContext());
         mMyLocationListener = new MyLocationListener();
         mLocationClient.registerLocationListener(mMyLocationListener);
-//		mGeofenceClient = new GeofenceClient(getApplicationContext());
-
         mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
     }
 

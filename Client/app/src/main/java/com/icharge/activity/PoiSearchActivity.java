@@ -95,7 +95,7 @@ public class PoiSearchActivity extends Activity implements
                     return;
                 }
                 //String city = ((EditText) findViewById(R.id.city)).getText().toString();
-                String city = "北京";
+                String city = "杭州";
                 /**
                  * 使用建议搜索服务获取建议列表，结果在onSuggestionResult()中更新
                  */
@@ -113,7 +113,7 @@ public class PoiSearchActivity extends Activity implements
             @Override
             public void onClick(View v) {
                 //EditText editCity = (EditText) findViewById(R.id.city);
-                //String city = "北京";
+                //String city = "杭州";
                 EditText editSearchKey = (EditText) findViewById(R.id.searchkey);
                 String keyword = editSearchKey.getText().toString();
 /*
