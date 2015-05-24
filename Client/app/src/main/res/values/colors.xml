@@ -51,4 +51,6 @@
     <!--myorder -->
     <color name="myorder_line_bg">#FFF</color>
 
+    <color name="background_all">#EEEEEE</color>
+
 </resources>

@@ -132,12 +132,15 @@ public class PoiSearchActivity extends Activity implements OnGetSuggestionResult
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
-                Toast.makeText(PoiSearchActivity.this, sugAdapter.getItem(position), Toast.LENGTH_LONG)
-                        .show();
+                Intent intent = new Intent();
+                //把返回数据存入Intent
+                intent.putExtra("result", sugAdapter.getItem(position));
+                //设置返回数据
+                PoiSearchActivity.this.setResult(2, intent);
+                //关闭Activity
+                PoiSearchActivity.this.finish();
             }
-
         });
-
     }
 
     @Override
