@@ -25,6 +25,7 @@ public class PopDetailActivity extends Activity{
 
     private Button btn_jmp_navi, btn_jmp_detail;
     private TextView text_information;
+    private TextView mTitle;
     private LinearLayout layout;
 
     @Override
@@ -36,6 +37,7 @@ public class PopDetailActivity extends Activity{
         btn_jmp_detail = (Button) this.findViewById(R.id.jmp_detail);
         text_information = (TextView)findViewById(R.id.information);
         layout=(LinearLayout)findViewById(R.id.pop_layout);
+        mTitle = ((TextView) findViewById(R.id.title));
 
         Bundle bundle = this.getIntent().getExtras();
         //接收name值
@@ -44,7 +46,10 @@ public class PopDetailActivity extends Activity{
         final double station_longitude = bundle.getDouble("station_longitude");
         final double my_latitude = bundle.getDouble("my_latitude");
         final double my_longitude = bundle.getDouble("my_longitude");
-        text_information.setText(station_name);
+        final String station_loc = bundle.getString("staticon_loc");
+        text_information.setText(station_loc);
+        mTitle.setText(station_name);
+
 
 
         //添加选择窗口范围监听可以优先获取触点，即不再执行onTouchEvent()函数，点击其他地方时执行onTouchEvent()函数销毁Activity

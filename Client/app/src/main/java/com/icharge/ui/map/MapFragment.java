@@ -341,6 +341,7 @@ public class MapFragment extends Fragment implements
                     Bundle bundle = new Bundle();
                     //传递name参数为tinyphp
                     bundle.putString("station_name", str);
+                    bundle.putString("staticon_loc", mLocsList.get(pos).getLocation());
                     bundle.putDouble("station_latitude", marker.getPosition().latitude);
                     bundle.putDouble("station_longitude", marker.getPosition().longitude);
                     bundle.putDouble("my_latitude", my_latitude);
