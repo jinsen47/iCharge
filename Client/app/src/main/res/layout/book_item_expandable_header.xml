@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未定价"
+        android:textColor="@color/text_secondary" />
+    <TextView
+        android:id="@+id/valid_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="空位: "
+        android:textColor="@color/text_secondary"
+        android:layout_toRightOf="@id/price"
+        android:layout_marginLeft="80dp"
+        />
+    <TextView
+        android:id="@+id/valic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/text_secondary"
+        android:layout_toRightOf="@id/valid_title" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/book_up_arrow"/>
+
+</RelativeLayout>

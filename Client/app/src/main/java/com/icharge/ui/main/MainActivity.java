@@ -30,9 +30,6 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
-
-        int width = ScreenHelper.getScreenWidth(this);
-        int height = ScreenHelper.getScreenHeight(this);
         mToolbar = ((Toolbar) findViewById(R.id.tool_bar));
         mViewPager = (ViewPagerCompat) findViewById(R.id.main_cotainer);
         mAdapter = new MainAdapter(getSupportFragmentManager());
@@ -45,10 +42,6 @@ public class MainActivity extends BaseActivity {
         mTabs.setBackgroundColor(getResources().getColor(R.color.color_primary));
         mTabs.setDividerColor(getResources().getColor(R.color.main_divider));
         mTabs.setIndicatorColor(getResources().getColor(R.color.color_primary_dark));
-
-        mTabs.setShouldExpand(true);
-
-
     }
 
     @Override

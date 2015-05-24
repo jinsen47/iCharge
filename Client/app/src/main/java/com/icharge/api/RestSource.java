@@ -52,8 +52,7 @@ public class RestSource {
         @Override
         public void success(Object o, Response response) {
             KnowListBean bean = ((KnowListBean) o);
-            List<KnowBean> list = bean.getList();
-            BusProvider.getDefaultBus().post(list);
+            BusProvider.getDefaultBus().post(bean);
         }
 
         @Override
@@ -67,8 +66,7 @@ public class RestSource {
         @Override
         public void success(Object o, Response response) {
             LocationListBean bean = ((LocationListBean) o);
-            List<LocationBean> list = bean.getList();
-            BusProvider.getDefaultBus().post(list);
+            BusProvider.getDefaultBus().post(bean);
         }
 
         @Override

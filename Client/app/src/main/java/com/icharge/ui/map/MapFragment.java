@@ -55,6 +55,7 @@ import com.baidu.lbsapi.auth.LBSAuthManagerListener;
 import com.baidu.navisdk.BaiduNaviManager;
 import com.icharge.api.RestSource;
 import com.icharge.beans.LocationBean;
+import com.icharge.beans.LocationListBean;
 import com.icharge.utils.BusProvider;
 
 import java.util.ArrayList;
@@ -353,8 +354,8 @@ public class MapFragment extends Fragment implements
 
     }
 
-    public void onEventMainThread(List<LocationBean> list) {
-        mLocsList = list;
+    public void onEventMainThread(LocationListBean bean) {
+        mLocsList = bean.getList();
         mMarkers = new ArrayList<>();
         for (int i = 0; i < mLocsList.size(); i++) {
             mSearch = GeoCoder.newInstance();

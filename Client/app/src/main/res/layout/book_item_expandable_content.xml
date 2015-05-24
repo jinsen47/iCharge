@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/phone_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/book_phone"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4001234567"
+        android:textColor="@color/text_primary"
+        android:layout_toRightOf="@id/phone_icon"
+        android:layout_toEndOf="@id/phone_icon"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+    <TextView
+        android:id="@+id/count_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/phone_num"
+        android:layout_toEndOf="@id/phone_num"
+        android:text="电桩:"
+        android:layout_alignTop="@id/phone_num"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:textColor="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/count_fast_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/count_title"
+        android:layout_alignLeft="@id/count_title"
+        android:layout_alignStart="@id/count_title"
+        android:layout_marginTop="16dp"
+        android:text="快充总数:"
+        android:textColor="@color/text_secondary"/>
+
+    <TextView
+        android:id="@+id/count_slow_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/count_fast_title"
+        android:layout_alignStart="@id/count_fast_title"
+        android:layout_below="@id/count_fast_title"
+        android:layout_marginTop="16dp"
+        android:text="慢充总数:"
+        android:textColor="@color/text_secondary"/>
+
+    <TextView
+        android:id="@+id/count_fast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/count_fast_title"
+        android:layout_alignTop="@id/count_fast_title"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text="10"
+        android:textColor="@color/color_primary"/>
+
+    <TextView
+        android:id="@+id/count_slow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/count_slow_title"
+        android:layout_alignTop="@id/count_slow_title"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text="10"
+        android:textColor="@color/color_primary"/>
+
+    <TextView
+        android:id="@+id/valid_fast_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/count_fast_title"
+        android:layout_toEndOf="@id/count_fast_title"
+        android:layout_alignTop="@id/count_fast_title"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:text="空闲:"
+        android:textColor="@color/text_secondary"/>
+
+    <TextView
+        android:id="@+id/valid_slow_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/count_slow_title"
+        android:layout_toEndOf="@id/count_slow_title"
+        android:layout_alignTop="@id/count_slow_title"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:text="空闲:"
+        android:textColor="@color/text_secondary"/>
+
+    <TextView
+        android:id="@+id/valid_fast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/valid_fast_title"
+        android:layout_toEndOf="@id/valid_fast_title"
+        android:layout_alignTop="@id/valid_fast_title"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text="0"
+        android:textColor="@color/color_vivid"/>
+
+    <TextView
+        android:id="@+id/valid_slow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/valid_slow_title"
+        android:layout_toEndOf="@id/valid_slow_title"
+        android:layout_alignTop="@id/valid_slow_title"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text="0"
+        android:textColor="@color/color_vivid"/>
+
+</RelativeLayout>

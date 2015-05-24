@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.icharge.activity.R;
 import com.icharge.api.RestSource;
 import com.icharge.beans.KnowBean;
+import com.icharge.beans.KnowListBean;
 import com.icharge.utils.BusProvider;
 
 import java.util.ArrayList;
@@ -82,10 +83,10 @@ public class KnowFragment extends android.support.v4.app.Fragment {
         });
     }
 
-    public void onEventMainThread(List<KnowBean> list) {
+    public void onEventMainThread(KnowListBean bean) {
         mList.clear();
-        for (int i = 0; i < list.size(); i++) {
-            mList.add(list.get(i));
+        for (int i = 0; i < bean.getList().size(); i++) {
+            mList.add(bean.getList().get(i));
         }
         mAdapter.notifyDataSetChanged();
     }
