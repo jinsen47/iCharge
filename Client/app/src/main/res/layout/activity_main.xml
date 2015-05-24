@@ -13,7 +13,7 @@
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/main_tabs"
         android:layout_width="match_parent"
-        android:layout_height="48dip"
+        android:layout_height="@dimen/main_tab_height"
         android:layout_below="@id/tool_bar"
         app:pstsShouldExpand="true" />
     <LinearLayout

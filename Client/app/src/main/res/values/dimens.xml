@@ -1,9 +1,51 @@
 <resources>
+    <!-- Main Activity -->
+    <dimen name="main_tab_height">48dp</dimen>
+    <dimen name="main_tab_size">18sp</dimen>
 
+    <!-- Map Fragment-->
+    <dimen name="map_zoom_right">10dp</dimen>
+    <dimen name="map_zoom_bottom">20dp</dimen>
+    <dimen name="map_zoom_button_size">40dp</dimen>
+    <dimen name="map_button_margin">10dp</dimen>
+
+    <!-- Book Fragmeng-->
+    <dimen name="book_icon_marginTop">4dp</dimen>
+    <dimen name="book_icon_marginLeft">16dp</dimen>
+    <dimen name="book_icon_width">18dp</dimen>
+    <dimen name="book_icon_height">24dp</dimen>
+    <dimen name="book_title_margin_left">8dp</dimen>
+    <dimen name="book_title_margin_top">10dp</dimen>
+    <dimen name="book_title_text_size">14sp</dimen>
+    <dimen name="book_distance_marginRight">22dp</dimen>
+    <dimen name="book_name_marginTop">20dp</dimen>
+    <dimen name="book_name_text_size">12sp</dimen>
+    <dimen name="book_rating_marginTop">10dp</dimen>
+    <dimen name="book_rating_maginLeft">4dp</dimen>
+    <dimen name="book_expand_paddingLeft">40dp</dimen>
+    <dimen name="book_expand_marginTop">20dp</dimen>
+
+    <dimen name="book_expand_head_valid_marginLeft">90dp</dimen>
+    <dimen name="book_expand_head_image_width">14dp</dimen>
+    <dimen name="book_expand_head_image_height">10dp</dimen>
+    <dimen name="book_expand_head_image_marginRight">16dp</dimen>
+
+    <dimen name="book_expand_content_phone_icon_width">28dp</dimen>
+    <dimen name="book_expand_content_phone_icon_height">28dp</dimen>
+    <dimen name="book_expand_content_phone_icon_marginTop">4dp</dimen>
+    <dimen name="book_expand_content_phone_num_marginTop">12dp</dimen>
+    <dimen name="book_expand_content_phone_num_marginLeft">8dp</dimen>
+
+    <dimen name="book_expand_content_count_title_marginLeft">126dp</dimen>
+    <dimen name="book_expand_content_count_marginTop">10dp</dimen>
+
+    <dimen name="book_btn_text_size">14sp</dimen>
+    <dimen name="book_btn_height">40dp</dimen>
 
     <!--all page  set-->
     <dimen name="all_page_title_text_size">20sp</dimen>
     <dimen name="all_page_sub_text_size">18sp</dimen>
+
 
 
 

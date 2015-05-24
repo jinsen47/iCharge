@@ -4,10 +4,10 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/phone_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/book_expand_content_phone_icon_width"
+        android:layout_height="@dimen/book_expand_content_phone_icon_height"
         android:background="@drawable/book_phone"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/book_expand_content_phone_icon_marginTop"
         />
     <TextView
         android:id="@+id/phone_num"
@@ -15,21 +15,22 @@
         android:layout_height="wrap_content"
         android:text="4001234567"
         android:textColor="@color/text_primary"
+        android:textSize="@dimen/book_name_text_size"
         android:layout_toRightOf="@id/phone_icon"
         android:layout_toEndOf="@id/phone_icon"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp" />
+        android:layout_marginTop="@dimen/book_expand_content_phone_num_marginTop"
+        android:layout_marginLeft="@dimen/book_expand_content_phone_num_marginLeft"
+        android:layout_marginStart="@dimen/book_expand_content_phone_num_marginLeft" />
     <TextView
         android:id="@+id/count_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/phone_num"
-        android:layout_toEndOf="@id/phone_num"
+        android:layout_alignParentLeft="true"
         android:text="电桩:"
+        android:textSize="@dimen/book_name_text_size"
         android:layout_alignTop="@id/phone_num"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginLeft="@dimen/book_expand_content_count_title_marginLeft"
+        android:layout_marginStart="@dimen/book_expand_content_count_title_marginLeft"
         android:textColor="@color/text_primary"/>
 
     <TextView
@@ -39,8 +40,9 @@
         android:layout_below="@id/count_title"
         android:layout_alignLeft="@id/count_title"
         android:layout_alignStart="@id/count_title"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/book_expand_content_count_marginTop"
         android:text="快充总数:"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"/>
 
     <TextView
@@ -50,8 +52,9 @@
         android:layout_alignLeft="@id/count_fast_title"
         android:layout_alignStart="@id/count_fast_title"
         android:layout_below="@id/count_fast_title"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/book_expand_content_count_marginTop"
         android:text="慢充总数:"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"/>
 
     <TextView
@@ -63,6 +66,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
         android:text="10"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/color_primary"/>
 
     <TextView
@@ -74,6 +78,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
         android:text="10"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/color_primary"/>
 
     <TextView
@@ -86,6 +91,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginStart="48dp"
         android:text="空闲:"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"/>
 
     <TextView
@@ -98,6 +104,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginStart="48dp"
         android:text="空闲:"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"/>
 
     <TextView
@@ -122,6 +129,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
         android:text="0"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/color_vivid"/>
 
 </RelativeLayout>
