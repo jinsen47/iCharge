@@ -8,26 +8,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="未定价"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary" />
     <TextView
         android:id="@+id/valid_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="空位: "
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"
         android:layout_toRightOf="@id/price"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="@dimen/book_expand_head_valid_marginLeft"
         />
     <TextView
-        android:id="@+id/valic"
+        android:id="@+id/valid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textSize="@dimen/book_name_text_size"
         android:textColor="@color/text_secondary"
         android:layout_toRightOf="@id/valid_title" />
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/book_expand_head_image_width"
+        android:layout_height="@dimen/book_expand_head_image_height"
+        android:layout_marginRight="@dimen/book_expand_head_image_marginRight"
+        android:layout_marginEnd="@dimen/book_expand_head_image_marginRight"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/book_up_arrow"/>

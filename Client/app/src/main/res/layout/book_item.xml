@@ -13,21 +13,24 @@
         android:background="@color/white">
         <ImageView
             android:id="@+id/charger_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/charge_slow_free"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_width="@dimen/book_icon_width"
+            android:layout_height="@dimen/book_icon_height"
+            android:background="@drawable/charger_fast_full"
+            android:layout_marginTop="@dimen/book_icon_marginTop"
+            android:layout_marginLeft="@dimen/book_icon_marginLeft"
+            android:layout_marginStart="@dimen/book_icon_marginLeft"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/charger_type"
             android:layout_toRightOf="@id/charger_type"
-            android:layout_alignTop="@id/charger_type"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/book_title_margin_left"
+            android:layout_marginStart="@dimen/book_title_margin_left"
+            android:layout_marginTop="@dimen/book_title_margin_top"
             android:textColor="@color/text_primary"
+            android:textSize="@dimen/book_title_text_size"
             android:text="Text Title"/>
         <TextView
             android:id="@+id/distance"
@@ -36,10 +39,11 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/title"
-            android:layout_marginRight="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="1.01公里"
-            android:textColor="@color/text_primary"
+            android:layout_marginRight="@dimen/book_distance_marginRight"
+            android:layout_marginEnd="@dimen/book_distance_marginRight"
+            android:text="1.01 Km"
+            android:textSize="@dimen/book_title_text_size"
+            android:textColor="@color/color_vivid"
             />
         <TextView
             android:id="@+id/name"
@@ -47,8 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/title"
             android:layout_below="@id/title"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/book_name_marginTop"
             android:text="位置描述"
+            android:textSize="@dimen/book_name_text_size"
             android:textColor="@color/text_secondary" />
         <TextView
             android:id="@+id/rating_title"
@@ -56,15 +61,20 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/name"
             android:layout_below="@id/name"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/book_rating_marginTop"
             android:text="评分: "
-            android:textColor="@color/text_secondary"/>
-        <RatingBar
+            android:textSize="@dimen/book_name_text_size"
+            android:textColor="@color/text_primary"/>
+        <TextView
             android:id="@+id/rating_bar"
             android:layout_width="wrap_content"
-            android:layout_height="16dp"
+            android:layout_height="wrap_content"
             android:layout_toRightOf="@id/rating_title"
             android:layout_toEndOf="@id/rating_title"
+            android:layout_marginLeft="@dimen/book_rating_maginLeft"
+            android:layout_marginStart="@dimen/book_rating_maginLeft"
+            android:text="★★★★★"
+            android:textColor="@color/rating_star"
             android:layout_alignBottom="@id/rating_title" />
 
         <com.andexert.expandablelayout.library.ExpandableLayout
@@ -72,14 +82,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/rating_title"
-            android:paddingLeft="56dp"
-            android:paddingRight="56dp"
+            android:paddingLeft="@dimen/book_expand_paddingLeft"
+            android:layout_marginTop="@dimen/book_expand_marginTop"
             expandable:el_headerLayout="@layout/book_item_expandable_header"
             expandable:el_contentLayout="@layout/book_item_expandable_content"/>
 
         <LinearLayout
+            android:id="@+id/linear_area"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/book_btn_height"
             android:layout_below="@id/expandableLayout"
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
@@ -90,6 +101,7 @@
                 android:text="导航"
                 android:textColor="@color/color_primary"
                 android:layout_weight="1"
+                android:textSize="@dimen/book_btn_text_size"
                 android:background="@color/grey_light"/>
 
             <Button
@@ -97,10 +109,19 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:text="预约"
+                android:textSize="@dimen/book_btn_text_size"
                 android:textColor="@color/color_primary"
                 android:layout_weight="1"
                 android:background="@color/grey_light"/>
         </LinearLayout>
+        
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:background="#e5e5e5"
+            android:layout_alignTop="@id/linear_area"
+            android:layout_marginTop="8dp"/>
 
 
     </RelativeLayout>
