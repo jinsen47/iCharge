@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.icharge.activity.R;
 
@@ -15,12 +15,12 @@ import com.icharge.activity.R;
  */
 public class ProfileFragment extends Fragment {
 
-    private LinearLayout person_info;
-    private LinearLayout person_car;
-    private LinearLayout person_order;
-    private LinearLayout iwill_bulid;
-    private LinearLayout person_share;
-    private LinearLayout person_ac_order;
+    private RelativeLayout person_info;
+    private RelativeLayout person_car;
+    private RelativeLayout person_order;
+    private RelativeLayout iwill_bulid;
+    private RelativeLayout person_share;
+    private RelativeLayout person_ac_order;
     public View.OnClickListener onclicklistener;
 
     public static ProfileFragment newInstance(){
@@ -43,12 +43,12 @@ public class ProfileFragment extends Fragment {
 
     private void initView() {
 
-        person_info = (LinearLayout) getView().findViewById(R.id.person_info_detail);
-        person_car = (LinearLayout) getView().findViewById(R.id.person_car);
-        person_order = (LinearLayout) getView().findViewById(R.id.person_order);
-        iwill_bulid = (LinearLayout) getView().findViewById(R.id.iwill_bulid);
-        person_share = (LinearLayout) getView().findViewById(R.id.person_share);
-        person_ac_order = (LinearLayout) getView().findViewById(R.id.person_ac_order);
+        person_info = (RelativeLayout) getView().findViewById(R.id.person_info_detail);
+        person_car = (RelativeLayout) getView().findViewById(R.id.person_car);
+        person_order = (RelativeLayout) getView().findViewById(R.id.person_order);
+        iwill_bulid = (RelativeLayout) getView().findViewById(R.id.iwill_bulid);
+        person_share = (RelativeLayout) getView().findViewById(R.id.person_share);
+        person_ac_order = (RelativeLayout) getView().findViewById(R.id.person_ac_order);
     }
 
     private void setListener() {

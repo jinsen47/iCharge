@@ -25,17 +25,21 @@
                 android:orientation="vertical">
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/person_info_detail"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame1"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -52,33 +56,39 @@
 
 
 
-                    <TextView android:layout_width="180dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:text="个人信息"
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame1"
                         />
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+
                         >
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/turn_left2" />
+
                         <ImageView
                             android:adjustViewBounds="true"
                             android:scaleType ="fitXY"
-                            android:layout_width="@dimen/person_info_framelayout_image_w"
-                            android:layout_height="@dimen/person_info_framelayout_image_h" />
-
-                        <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
-                            android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:layout_width="82dp"
+                            android:layout_height="82dp"
+                            android:layout_gravity="right|center_vertical" />
                     </FrameLayout>
 
-                </LinearLayout>
+                </RelativeLayout>
 
 
 
@@ -90,17 +100,20 @@
 
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/person_car"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame2"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -123,11 +136,13 @@
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame2"
                         />
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -136,14 +151,14 @@
                             android:layout_height="@dimen/person_info_framelayout_image_h" />
 
                         <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:background="@drawable/turn_left2" />
                     </FrameLayout>
 
 
-                </LinearLayout>
+                </RelativeLayout>
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -152,19 +167,20 @@
                     />
 
 
-
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/person_order"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame3"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -187,11 +203,13 @@
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame3"
                         />
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -200,19 +218,12 @@
                             android:layout_height="@dimen/person_info_framelayout_image_h" />
 
                         <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:background="@drawable/turn_left2" />
                     </FrameLayout>
-
-
-                </LinearLayout>
-
-
-
-
-
+                </RelativeLayout>
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -220,20 +231,20 @@
                     android:background="@color/person_divider"
                     />
 
-
-
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/iwill_bulid"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame4"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
                         >
                         <ImageView
                             android:id="@+id/bulid"
@@ -257,11 +268,13 @@
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame4"
                         />
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -270,13 +283,13 @@
                             android:layout_height="@dimen/person_info_framelayout_image_h" />
 
                         <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:background="@drawable/turn_left2" />
                     </FrameLayout>
 
-                </LinearLayout>
+                </RelativeLayout>
 
 
                 <ImageView
@@ -289,17 +302,20 @@
 
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/person_share"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame5"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
                         >
                         <ImageView
                             android:id="@+id/share"
@@ -323,12 +339,14 @@
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame5"
                         />
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -337,12 +355,12 @@
                             android:layout_height="@dimen/person_info_framelayout_image_h" />
 
                         <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:background="@drawable/turn_left2" />
                     </FrameLayout>
-                </LinearLayout>
+                </RelativeLayout>
 
 
 
@@ -356,17 +374,20 @@
 
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:id="@+id/person_ac_order"
                     android:layout_weight="1"
+                    android:orientation="horizontal"
                     >
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:id="@+id/frame6"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
                         >
                         <ImageView
                             android:id="@+id/ivVideo"
@@ -386,16 +407,18 @@
 
                     <TextView android:layout_width="180dp"
                         android:layout_height="fill_parent"
-                        android:text="我接收的电桩"
+                        android:text="我接收的"
                         android:textColor="@color/person_line_text_color"
                         android:gravity="left|center"
                         android:textSize="@dimen/all_page_sub_text_size"
+                        android:layout_toRightOf="@id/frame6"
                         />
 
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         >
                         <ImageView
                             android:adjustViewBounds="true"
@@ -404,12 +427,12 @@
                             android:layout_height="@dimen/person_info_framelayout_image_h" />
 
                         <TextView
-                            android:layout_width="@dimen/person_info_framelayout_turn_w"
-                            android:layout_height="@dimen/person_info_framelayout_turn_h"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/turn_left" />
+                            android:background="@drawable/turn_left2" />
                     </FrameLayout>
-                </LinearLayout>
+                </RelativeLayout>
 
             </LinearLayout>
         </LinearLayout>

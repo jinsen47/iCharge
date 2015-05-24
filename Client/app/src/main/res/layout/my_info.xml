@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/order_charge_allpage_bg"
+              android:background="@color/background_all"
               android:orientation="vertical" >
 
     <TextView
@@ -20,6 +20,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/myinfo_main_h"
                 android:gravity="center"
+                android:layout_marginTop="16dip"
             >
         <ImageView
                 android:id="@+id/main_image"
@@ -29,26 +30,22 @@
                 android:src="@drawable/testround" />
 
     </LinearLayout>
-    
-    
+
+
 
 
     <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="101dp"
-            android:layout_margin="10dp"
+            android:layout_margin="24dp"
             android:background="@drawable/corners_bg"
             android:orientation="vertical"
-
             android:padding="10dp" >
 
-
-
-
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
 
 
 
@@ -56,15 +53,16 @@
                     android:layout_width="@dimen/order_charge_line_w"
                     android:layout_height="@dimen/order_charge_line_h"
                     android:layout_marginLeft="14dp"
+
                     android:text="昵称"
                     android:textColor="#000"
                     android:textSize="@dimen/all_page_sub_text_size" />
 
             <EditText
                     android:id="@+id/inputDate"
-                    android:layout_width="@dimen/order_charge_line_edit_w"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/order_charge_line_edit_h"
-                    android:layout_gravity="center"
+
 
                     android:background="#FFF"
                     android:textColor="@color/order_charge_text_color"
@@ -94,24 +92,29 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true" >
-
-
+                android:layout_centerVertical="true">
 
             <TextView
-                    android:layout_width="@dimen/order_charge_line_w"
-                    android:layout_height="@dimen/order_charge_line_h"
+                    android:layout_width="100dp"
+                    android:layout_height="22dp"
                     android:layout_marginLeft="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerVertical="true"
                     android:text="性别"
                     android:textColor="#000"
-                    android:textSize="@dimen/all_page_sub_text_size" />
+                    android:textSize="@dimen/all_page_sub_text_size"
+
+
+               />
 
             <RadioGroup
                     android:id="@+id/sex"
                     android:layout_width="fill_parent"
                     android:orientation="horizontal"
                     android:gravity="left"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                >
                 <RadioButton
                         android:id="@+id/male"
                         android:layout_width="@dimen/myinfo_radioButton_w"
@@ -127,25 +130,17 @@
 
             </RadioGroup>
 
-
         </LinearLayout>
     </LinearLayout>
-
-
-
-
-
-
 
     <LinearLayout
 
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
+            android:layout_margin="24dp"
             android:background="@drawable/corners_bg"
             android:gravity="center_vertical"
             android:padding="10dp" >
-
 
         <TextView
 
@@ -157,7 +152,7 @@
                 android:textSize="@dimen/all_page_sub_text_size" />
         <EditText
                 android:id="@+id/charge_place"
-                android:layout_width="@dimen/order_charge_line_edit_w"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/order_charge_line_edit_h"
                 android:background="#FFF"
                 android:textColor="@color/order_charge_text_color"
