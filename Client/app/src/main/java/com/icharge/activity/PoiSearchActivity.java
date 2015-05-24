@@ -51,10 +51,9 @@ public class PoiSearchActivity extends Activity implements OnGetSuggestionResult
         mSuggestionSearch = SuggestionSearch.newInstance();
         mSuggestionSearch.setOnGetSuggestionResultListener(this);
         keyWorldsView = (AutoCompleteTextView) findViewById(R.id.searchkey);
-        sugAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line);
+        //sugAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line);
+        sugAdapter = new ArrayAdapter<String>(this,R.layout.list_item,R.id.text_my);
         //keyWorldsView.setAdapter(sugAdapter);
-
 
         SuggestionList = (ListView)findViewById(R.id.listView_suggestion);
         SuggestionList.setAdapter(sugAdapter);
