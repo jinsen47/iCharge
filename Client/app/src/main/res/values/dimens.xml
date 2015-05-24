@@ -1,6 +1,6 @@
 <resources>
     <!-- Main Activity -->
-    <dimen name="main_tab_height">48dp</dimen>
+    <dimen name="main_tab_height">32dp</dimen>
     <dimen name="main_tab_size">18sp</dimen>
 
     <!-- Map Fragment-->

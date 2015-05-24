@@ -6,4 +6,15 @@
     android:background="?attr/colorPrimary"
     android:minHeight="?attr/actionBarSize"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    android:theme="@style/AppToolbar"/>
+    android:theme="@style/AppToolbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/title"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

@@ -41,7 +41,12 @@ public class MainActivity extends BaseActivity {
 
         mTabs.setBackgroundColor(getResources().getColor(R.color.color_primary));
         mTabs.setDividerColor(getResources().getColor(R.color.main_divider));
-        mTabs.setIndicatorColor(getResources().getColor(R.color.color_primary_dark));
+        mTabs.setIndicatorColor(getResources().getColor(R.color.rating_star));
+
+//        mToolbar.setLogo(R.drawable.title);
+        this.setTitle("");
+        mToolbar.setTitle("");
+
     }
 
     @Override
