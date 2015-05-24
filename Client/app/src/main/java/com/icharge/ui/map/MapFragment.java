@@ -359,8 +359,7 @@ public class MapFragment extends Fragment implements
         for (int i = 0; i < mLocsList.size(); i++) {
             mSearch = GeoCoder.newInstance();
             mSearch.setOnGetGeoCodeResultListener(MapFragment.this);
-
-            mSearch.geocode(new GeoCodeOption().city("杭州").address(mLocsList.get(i).getLocation()));
+            mSearch.geocode(new GeoCodeOption().city(city_all).address(mLocsList.get(i).getLocation()));
         }
     }
 
@@ -460,10 +459,8 @@ public class MapFragment extends Fragment implements
             super.onPoiClick(index);
             PoiInfo poi = getPoiResult().getAllPoi().get(index);
             // if (poi.hasCaterDetails) {
-
             mPoiSearch.searchPoiDetail((new PoiDetailSearchOption())
                     .poiUid(poi.uid));
-
             // }
             return true;
         }
