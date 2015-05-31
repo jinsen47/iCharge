@@ -43,8 +43,11 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookHold
     public void onBindViewHolder(BookHolder holder, int position) {
         holder.mTitle.setText(mList.get(position).getName());
         holder.mName.setText(mList.get(position).getLocation());
+        holder.mPhoneNum.setText(mList.get(position).getTelephone());
         holder.mFastCount.setText(mList.get(position).getFast_count());
+        holder.mFastValid.setText(mList.get(position).getFastValid());
         holder.mSlowCount.setText(mList.get(position).getSlow_count());
+        holder.mSlowValid.setText(mList.get(position).getSlowValid());
     }
 
     @Override

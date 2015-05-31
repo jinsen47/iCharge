@@ -3,21 +3,21 @@ package com.icharge.beans;
 import java.util.List;
 
 public class LocationListBean {
-	private String count;
+	private String city;
 	private List<LocationBean> list;
 
-	public LocationListBean(String count, List<LocationBean> list) {
-		this.count = count;
+	public LocationListBean(String city, List<LocationBean> list) {
+		this.city = city;
 		this.list = list;
 	}
 
 	public LocationListBean(){}
 
-	public String getCount() {
-		return count;
+	public String getCity() {
+		return city;
 	}
-	public void setCount(String count) {
-		this.count = count;
+	public void setCity(String city) {
+		this.city = city;
 	}
 	public List<LocationBean> getList() {
 		return list;
